@@ -4,7 +4,7 @@ import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 
 public class Agency implements InvocationHandler {
-    private Object onePerson;
+    private final Object onePerson;
 
     public Agency(Object onePerson) {
         this.onePerson = onePerson;

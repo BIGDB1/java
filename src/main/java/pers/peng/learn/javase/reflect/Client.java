@@ -8,7 +8,7 @@ public class Client {
     public static void main(String[] args) {
         PeopleWhoLookingHouse phs = new PeopleWhoLookingHouse();
         InvocationHandler handler = new Agency(phs);
-
+        
         RentingHouse rth = (RentingHouse) Proxy.newProxyInstance(handler.getClass().getClassLoader(), phs.getClass().getInterfaces(), handler);
 
         rth.findHouse();
